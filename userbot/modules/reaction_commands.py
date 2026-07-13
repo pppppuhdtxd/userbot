@@ -171,7 +171,7 @@ class ReactionCommands(Module):
 
     # ── Environment Toggles (configure which chat types are active) ───────
     ENABLE_FOR_BOTS: bool = True      # Private chats with bots
-    ENABLE_FOR_USERS: bool = True     # Private chats with users
+    ENABLE_FOR_USERS: bool = False     # Private chats with users
     ENABLE_FOR_GROUPS: bool = False   # Basic groups and supergroups
     ENABLE_FOR_CHANNELS: bool = False # Channels (broadcast)
 

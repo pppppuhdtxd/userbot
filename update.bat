@@ -1,6 +1,15 @@
 @echo off
+echo Pulling latest changes...
+git pull
+
+echo Staging valid changes...
 git add .
-git commit -m "auto update - %date% %time%"
+
+echo Committing...
+git commit -m "auto-update via bat"
+
+echo Pushing to remote...
 git push
-echo Update completed!
+
+echo Update complete!
 pause

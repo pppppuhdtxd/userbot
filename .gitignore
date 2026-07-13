@@ -1,28 +1,52 @@
-﻿# Sensitive files
-.env
-userbot/accounts/
-userbot/data/logs/
-*.session
-*.log
-*.backup_*
+﻿# ==========================================
+# Accounts & Sensitive Data
+# ==========================================
+# Ignore entire accounts folder to protect sessions and configs
+accounts/
+# Keep the folder structure in git using .gitkeep
+!accounts/.gitkeep
 
-# Python
+# Ignore specific sensitive files anywhere
+*.session
+.env
+.env.*
+account.json
+
+# ==========================================
+# Data Directory (Logs, Cache, Settings)
+# ==========================================
+data/
+!data/.gitkeep
+
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+*.py[cod]
+*$py.class
 *.so
-*.egg
 *.egg-info/
+*.egg
 dist/
 build/
-*.whl
+.venv/
+venv/
+env/
 
-# OS & IDE
-.DS_Store
-Thumbs.db
-desktop.ini
+# ==========================================
+# Logs & Temporary Files
+# ==========================================
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ==========================================
+# IDE & OS Generated Files
+# ==========================================
 .vscode/
 .idea/
-*.iml
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
